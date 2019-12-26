@@ -42,7 +42,7 @@ let modulePlats = (function () {
         getTimer(dish) {
             for (let elem of plats) {
                 if (elem.name == dish) {
-                    return(elem.preparation);
+                    return(parseInt(elem.preparation,10));
                 }
             }
         },
@@ -68,10 +68,15 @@ let modulePlats = (function () {
             let newList = [];
             listIng.forEach(function (index) {
                 ingredients.forEach(ing => (ing.name == index) ? local = ing.local : a++);
-                console.log(a);
                 (local == 1) ? newList[b] = index + " (local)" : newList[b] = index + " (non local)";
                 b++;
             })
+            return newList;
+        },
+         //renvoie une liste de tout les ingredients de la liste d'ingrédients
+        getAllIngredients() {
+            let newList = [];
+            listIng.forEach(elem => newList.push(elem.name));
             return newList;
         }
     }
