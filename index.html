@@ -31,6 +31,7 @@
               <tr>
                   <th class="name">Nom</th>
                   <th class="price">Prix</th>
+                  <th class="isLocal">local</th>
               </tr>
             </table>
         </div>
@@ -70,6 +71,10 @@
                 <div>
                     <label for="price">Prix</label>
                     <input type="text" name="price" id="price">
+                </div>
+                <div>
+                    <label for="isLocal">ingrédient local ?</label>
+                    <input type="checkbox" id="isLocal" name="isLocal">
                 </div>
             </form>
             <button onclick="fonctionPourRécupérerLesInfosSurLeIngrédient()">Ajouter l'ingrédient</button>
