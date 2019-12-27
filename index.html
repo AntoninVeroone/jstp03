@@ -14,12 +14,13 @@
 <div id="header">
     <h1><span id="title">A la bonne franquette </span><small class="subtitle"> Tout est bon dans le cochon</small></h1>
     <h2>
-        <a id="addRecipe" class="dropdown-item" href="#listePlat">Ajouter Plat</a>
-        <a id="addIng" class="dropdown-item" href="#listeIngrédient">Ajouter Ingrédient</a>
-        <a id="viewPlat" class="dropdown-item" href="#ajoutPlat">Voir Plats</a>
-        <a id="viewIng" class="dropdown-item" href="#ajoutIngrédient">Voir Ingrédients</a>
+        <a id="viewPlat" class="dropdown-item" href="#listePlat">Voir Plats</a>
+        <a id="viewIng" class="dropdown-item" href="#listeIngrédient">Voir Ingrédients</a>
+        <a id="addRecipe" class="dropdown-item" href="#ajoutPlat">Ajouter Plat</a>
+        <a id="addIng" class="dropdown-item" href="#ajoutIngrédient">Ajouter Ingrédient</a>
     </h2>
 </div>
+
 <div id="content">
 
     <div id="listePlat">
@@ -48,44 +49,44 @@
         <form id="plat" action="/ma-page-de-traitement" method="post">
             <div>
                 <label for="name">Nom</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" class="form-control">
             </div>
             <div>
                 <label for="timePrep">Temps de préaration</label>
-                <input type="text" name="timePrep" id="timePrep">
+                <input type="text" name="timePrep" id="timePrep" class="form-control">
             </div>
             <div>
                 <label for="ing">Ingrédients</label>
-                <textarea  name="ing" id="ing"></textarea>
+                <textarea  name="ing" id="ing" class="form-control"></textarea>
             </div>
             <div>
                 <label for="pricePrep">Prix de préparation</label>
-                <input type="text" name="pricePrep" id="pricePrep">
+                <input type="text" name="pricePrep" id="pricePrep" class="form-control">
             </div>
             <div>
                 <label for="priceTotal">Prix total</label>
-                <input type="text" name="priceTotal" id="priceTotal">
+                <input type="text" name="priceTotal" id="priceTotal" class="form-control">
             </div>
         </form>
-        <button onclick="fonctionPourRécupérerLesInfosSurLePlat()">Ajouter le plat</button>
+        <button onclick="fonctionPourRécupérerLesInfosSurLePlat()" class="btn btn-secondary">Ajouter le plat</button>
     </div>
-
+    
     <div id="ajoutIngrédient">
         <form id="ingredient" action="/ma-page-de-traitement" method="post">
             <div>
                 <label for="name">Nom</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" class="form-control">
             </div>
             <div>
                 <label for="price">Prix</label>
-                <input type="text" name="price" id="price">
+                <input type="text" name="price" id="price" class="form-control">
             </div>
             <div>
                 <label for="isLocal">ingrédient local ?</label>
                 <input type="checkbox" id="isLocal" name="isLocal">
             </div>
         </form>
-        <button onclick="fonctionPourRécupérerLesInfosSurLeIngrédient()">Ajouter l'ingrédient</button>
+        <button onclick="fonctionPourRécupérerLesInfosSurLeIngrédient()" class="btn btn-secondary">Ajouter l'ingrédient</button>
     </div>
 
 </div>
